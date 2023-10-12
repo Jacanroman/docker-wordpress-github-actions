@@ -20,7 +20,7 @@ services:
     image: wordpress
     restart: always
     ports:
-      - 8080:80
+      - "${PORT_TESTING_WORDPRESS}:80"
     depends_on:
       - db
     environment:
