@@ -16,10 +16,10 @@ services:
     networks:
       - default
   wordpress:
-    image: wordpress
+    image: wordpress:latest
     restart: always
     ports:
-      - "${PORT_TESTING_WORDPRESS}:80"
+      - "${PORT_TESTING_WORDPRESS:-8000}:80"
     depends_on:
       - db
     environment:
